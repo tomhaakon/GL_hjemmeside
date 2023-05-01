@@ -1,0 +1,119 @@
+
+              <div id="vis_kunst" class="visning" style="display: none">
+                <div class="gallery">
+                  <img
+                    src="./img/hjorten.jpeg"
+                    alt="Hjorten"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">"Hjorten" 2023</div>
+                </div>
+                <div class="gallery">
+                  <img
+                    src="./img/slakteren.jpeg"
+                    alt="Slakteren"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">"Slakteren" 2022</div>
+                </div>
+                <div class="gallery">
+                  <img
+                    src="./img/kua.jpeg"
+                    alt="Rødbrun høylandsfe"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">"Rødbrun Høylandsfe" 2022</div>
+                </div>
+              </div>
+              <div id="vis_tattoo" class="visning" style="display: none">
+                <div class="gallery">
+                  <img
+                    src="./img/tattoo1.jpg"
+                    alt="Japansk sleeve"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">"Japansk sleeve" - uferdig. 2019</div>
+                </div>
+                <div class="gallery">
+                  <img
+                    src="./img/tattoo2.jpg"
+                    alt="Blomster"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">"Japansk sleeve" - uferdig. 2019</div>
+                </div>
+                <div class="gallery">
+                  <img
+                    src="./img/tattoo3.jpg"
+                    alt="Skalle med sjakk"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">Skalle med sjakkbrikker. 2018</div>
+                </div>
+              </div>
+              <div id="vis_bil" class="visning" style="display: none">
+                <div class="gallery">
+                  <img
+                    src="./img/bil1.jpeg"
+                    alt="camaro"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">Camaro 1978 interiør</div>
+                </div>
+                <div class="gallery">
+                  <img
+                    src="./img/bil2.jpeg"
+                    alt="camaro"
+                    width="600"
+                    height="400" />
+
+                  <div class="desc">Camaro 1978 hjul</div>
+                </div>
+                <div
+                  id="bilde_trykket"
+                  onclick="bildeTrykk('bilde_trykket')"
+                  class="gallery">
+                  <img
+                    src="./img/bil3.jpeg"
+                    alt="camaro"
+                    width="600"
+                    height="400" />
+                  <div class="desc">Camaro 1978 interiør</div>
+                </div>
+              </div>
+              <div id="bilde_vis" class="bilde_modal">
+                <img src="./img/bil3.jpeg" alt="camaro" class="bilde_stort" />
+                <span class="bilde_avbryt">&times;</span>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+                          <div class="interesse_boks">
+              <ul class="intersse_liste">
+                <li onclick="visInteresser('vis_kunst')">Kunst</li>
+                <li onclick="visInteresser('vis_tattoo')">Tatovering</li>
+                <li onclick="visInteresser('vis_bil')">Bil</li>
+              </ul>
+            </div>
+
+
+
+
+
+
+

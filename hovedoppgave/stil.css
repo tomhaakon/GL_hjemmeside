@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  background-color: #ffffff;
+}
+p.info_box {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  padding: 30px;
+}
+/* header */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #ffffff;
+}
+.header h1 {
+  font-size: 4vw;
+  margin: 0;
+}
+/* footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(185, 185, 185);
+}
+/*##############################################################
+################################################################
+//navigasjons bar//-------------------------------------------*/
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav button {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+  background-color: #333;
+  color: #ffffff;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+}
+.topnav.active {
+  background-color: aqua;
+}
+.topnav button:hover {
+  background-color: rgb(99, 99, 99);
+  color: #ffffff;
+}
+/*##############################################################
+################################################################
+// rader og kolonner // --------------------------------------*/
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+/* HØYRE KOLONNE - for diverse */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #ffffff;
+}
+/* bildeboks for innhold til høyre på siden*/
+.bildeboks {
+  top: 0px;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 10%;
+  padding-left: 0px;
+}
+ul {
+  list-style: none;
+  position: relative;
+  left: 0%;
+  font-size: 1vw;
+}
+ul h4 {
+  padding-top: 0px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+ul a {
+  color: #000;
+  text-decoration: none;
+}
+/* boks for å ha alt av innhold presentert*/
+.boks {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* side-innhold i denne boksen */
+div.side {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/*##############################################################
+################################################################
+// kontakt skjema side //-------------------------------------*/
+
+input[type="text"],
+select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+/* der man skriver inn beskjeden i kontakt skjema */
+textarea.kontakt_beskjed {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+/* kontakt tekst */
+label.kontakt {
+  font-size: large;
+  margin-bottom: 10px;
+}
+.send_knapp {
+  color: #000;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: rgb(176, 176, 176);
+  cursor: pointer;
+  font-size: 2vw;
+}
+/*##############################################################
+################################################################
+// modal for beskjed "sendt melding" //-----------------------*/
+.modal {
+  display: none; /* husk husk, gjør til at modalen IKKE er synlig uten at knappen er trykket på */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  font-size: 4vw;
+}
+.modal_innhold {
+  position: fixed;
+  top: 0;
+  background-color: #fefefe;
+  width: 100%;
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.modal_avbryt {
+  color: #4b4b4b;
+  float: right;
+  font-size: 10vw;
+  font-weight: bold;
+}
+.modal_avbryt:hover,
+.modal_avbryt:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*##############################################################
+################################################################
+ // Visning av bilder // -------------------------------------*/
+.bilder {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+.bilde_rad {
+  margin: 10px -16px;
+}
+.bilde_rad,
+.bilde_rad > .bilde_kolonne {
+  padding: 8px;
+  margin-bottom: 150px;
+}
+.bilde_kolonne {
+  float: left;
+  max-width: 230px;
+  max-height: 230px;
+  min-width: 100px;
+  width: 33.33%;
+  display: none;
+}
+.bilde_rad:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bilde_innhold {
+  background-color: white;
+  padding: 10px;
+}
+.bilde_vis {
+  display: block;
+}
+.bilde_knapp {
+  color: #000;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+.bilde_knapp:hover {
+  background-color: #ddd;
+}
+.bilde_knapp.aktiv {
+  background-color: #666;
+  color: white;
+}
+.zoom {
+  transition: transform 0.5s;
+}
+.zoom:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2);
+}
+/*##############################################################
+################################################################
+ // tidslinje //----------------------------------------------*/
+.tidslinje {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tidslinje_boks {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.tidslinje_innhold {
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.tidslinje_dato {
+  margin: 0px;
+}
+.tidslinje_bilde {
+  object-fit: cover;
+  opacity: 50%;
+  width: 100%;
+  min-height: 150px;
+  border-radius: 10px;
+  max-height: 250px;
+}
+.tidslinje_text {
+  padding: 5px;
+  margin-right: 40px;
+  position: absolute;
+  color: #000;
+  font-size: 1.5vw;
+  z-index: 1;
+  top: -3px;
+}
+.tidslinje_info {
+  background-color: #ffffffc0;
+  border-radius: 6px;
+  padding: 1px;
+}
+.tidslinje::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.tidslinje_boks::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #4d4d4d;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.tlvenstre {
+  left: 0%;
+}
+.tlhoyre {
+  left: 50%;
+}
+.tlvenstre::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.tlhoyre::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+.tlhoyre::after {
+  left: -16px;
+}
+/* 
+#################
+#################
+#mobil */
+@media only screen and (min-width: 500px) {
+  .header h1,
+  .modal_avbryt {
+    font-size: 10vw;
+  }
+  .topnav button {
+    font-size: 5vw;
+  }
+  .modal {
+    font-size: 4vw;
+  }
+  .footer,
+  p.info_box .bilde_knapp {
+    font-size: 2vw;
+  }
+  div.side,
+  ul,
+  .bilde_innhold,
+  .tidslinje_text {
+    font-size: 3vw;
+  }
+  .bilde_rad,
+  .bilde_rad > .bilde_kolonne {
+    padding: 8px;
+    margin-bottom: 200px;
+  }
+  .tidslinje_bilde {
+    min-height: 200px;
+    max-height: 500px;
+  }
+  .tidslinje_info {
+    padding: 3px;
+  }
+  .tidslinje_dato {
+    padding-top: 5px;
+  }
+}
+/* 
+#################
+#################
+#pc skjerm osv */
+@media only screen and (min-width: 992px) {
+  .header h1 {
+    font-size: 5vw;
+  }
+  .modal_avbryt {
+    font-size: 3vw;
+  }
+  .modal {
+    font-size: 2vw;
+  }
+  .topnav button,
+  .footer,
+  div.side,
+  ul,
+  .bilde_knapp,
+  .tidslinje_text,
+  p.info_box {
+    font-size: 1.5vw;
+  }
+  .bilde_innhold {
+    min-height: 400px;
+    font-size: 2vw;
+  }
+  .tidslinje_dato {
+    padding-top: 10px;
+    font-size: 2vw;
+  }
+}

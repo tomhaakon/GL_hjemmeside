@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stil.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <h1>tomhaakon.com</h1>
+    </div>
+    <!-- navigasjonsbar -->
+    <div class="topnav">
+      <button onclick="visSide('hjem')">Hjem</button>
+      <button onclick="visSide('interesser')">Interesser</button>
+      <button onclick="visSide('ommeg')">Om meg</button>
+      <button onclick="visSide('kontakt')">Kontakt</button>
+    </div>
+    <!-- hoved innhod -->
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="boks">
+          <div id="hjem" class="side">
+            <h2># Oppgave 12. Hovedoppgave for Nivå 1.</h2>
+
+            Lag et nytt prosjekt. <br />
+            Dette prosjektet skal da være en hjemmeside.<br />
+            Den skal inneholde: <br />
+            <li><del>Navbar.</del></li>
+            <br />
+            <li><del>Footer. </del></li>
+            <br />
+            <li><del>Frontside</del></li>
+            <br />
+            <li><del>About side</del></li>
+            <br />
+            <li><del>Ressursside (hvor nyttige linker kan legges)</del></li>
+            <br />
+            <li>
+              <del>Style siden og sett inn innhold som du mener ser bra ut. </del>
+            </li>
+            <br />
+            Push dette prosjektet opp til gitlab.com # Bonus: Bruk det du har lært frem til nå,
+            inkludert javascript til å presentere deler på siden.
+          </div>
+
+          <div id="interesser" class="side" style="display: none">
+            <div class="bilder">
+              <!-- interesse knapper  -->
+              <div id="knappBoks">
+                <button class="bilde_knapp aktiv" onclick="kategoriFilter('alt')">Vis alt</button>
+                <button class="bilde_knapp" onclick="kategoriFilter('maleri')">Malerier</button>
+                <button class="bilde_knapp" onclick="kategoriFilter('tattoo')">Tatoveringer</button>
+                <button class="bilde_knapp" onclick="kategoriFilter('camaro')">Camaro</button>
+              </div>
+              <!-- bilder  -->
+              <div class="bilde_rad">
+                <div class="bilde_kolonne maleri">
+                  <div class="bilde_innhold">
+                    <img class="zoom" src="./img/hjorten.jpeg" alt="Hjorten" style="width: 100%" />
+                    <h4>Hjorten</h4>
+                    <p>2023</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne maleri">
+                  <div class="bilde_innhold">
+                    <img
+                      class="zoom"
+                      src="img/slakteren.jpeg"
+                      alt="Slakteren"
+                      style="width: 100%"
+                    />
+                    <h4>Slakteren</h4>
+                    <p>2022</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne maleri">
+                  <div class="bilde_innhold">
+                    <img
+                      class="zoom"
+                      src="img/kua.jpeg"
+                      alt="Rødbrun høylandsfe"
+                      style="width: 100%"
+                    />
+                    <h4>Rødbrun høylandsfe</h4>
+                    <p>2023</p>
+                  </div>
+                </div>
+
+                <div class="bilde_kolonne tattoo">
+                  <div class="bilde_innhold">
+                    <img class="zoom" src="img/tattoo1.jpg" alt="sleeve" style="width: 100%" />
+                    <h4>Japansk sleeve(uferdig)</h4>
+                    <p>2018</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne tattoo">
+                  <div class="bilde_innhold">
+                    <img class="zoom" src="img/tattoo2.jpg" alt="Peon" style="width: 100%" />
+                    <h4>Peon</h4>
+                    <p>2018</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne tattoo">
+                  <div class="bilde_innhold">
+                    <img
+                      class="zoom"
+                      src="img/tattoo3.jpg"
+                      alt="Skalle med sjakkbrikke"
+                      style="width: 100%"
+                    />
+                    <h4>Skalle med sjakkbrikke</h4>
+                    <p>2017</p>
+                  </div>
+                </div>
+
+                <div class="bilde_kolonne camaro">
+                  <div class="bilde_innhold">
+                    <img class="zoom" src="img/bil1.jpeg" alt="Interiør" style="width: 100%" />
+                    <h4>Camaro 78</h4>
+                    <p>Interiør</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne camaro">
+                  <div class="bilde_innhold">
+                    <img
+                      class="zoom"
+                      id="bildeSRC"
+                      src="img/bil2.jpeg"
+                      alt="camaro"
+                      style="width: 100%"
+                    />
+                    <h4>Camaro 78</h4>
+                    <p>Hjul</p>
+                  </div>
+                </div>
+                <div class="bilde_kolonne camaro">
+                  <div class="bilde_innhold">
+                    <img class="zoom" src="img/bil3.jpeg" alt="camaro" style="width: 100%" />
+
+                    <h4>Camaro 78</h4>
+                    <p>Blå</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- om meg siden -->
+          <div id="ommeg" class="side" style="display: none">
+            <!-- Tidslinje -->
+            <div class="tidslinje">
+              <!-- 
+    ###################################
+    ###################################
+    ###### --------HØYRE BOKS -->
+              <div class="tidslinje_boks tlhoyre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: left">
+                    <b>2023</b>
+                  </h2>
+                  <p class="tidslinje_info">Startet på Prios med web-utvikling</p>
+                </div>
+                <img class="tidslinje_bilde" src="img/web.jpeg" />
+              </div>
+              <!-- 
+    ###################################
+    ###################################
+    ######---------VENSTRE BOKS -->
+              <div class="tidslinje_boks tlvenstre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: right">
+                    <b>2022</b>
+                  </h2>
+                  <p class="tidslinje_info">Åpnet et aterlier og satset på Oljemaling.</p>
+                </div>
+                <img src="img/atelier.jpeg" class="tidslinje_bilde" />
+              </div>
+              <!-- 
+    ###################################
+    ###################################
+    ###### --------HØYRE BOKS -->
+              <div class="tidslinje_boks tlhoyre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: left">
+                    <b>2022</b>
+                  </h2>
+                  <p class="tidslinje_info">Sluttet som tatovør etter 10 år i faget.</p>
+                </div>
+                <img src="img/evasion.jpg" class="tidslinje_bilde" />
+              </div>
+              <!-- 
+    ###################################
+    ###################################
+    ######---------VENSTRE BOKS -->
+              <div class="tidslinje_boks tlvenstre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: right">
+                    <b>2019</b>
+                  </h2>
+                  <p class="tidslinje_info">Startet Levanger Tattoo med kollega Stefan Strand.</p>
+                </div>
+                <img src="img/levanger_tattoo.jpeg" class="tidslinje_bilde" />
+              </div>
+              <!-- 
+    ###################################
+    ###################################
+    ###### --------HØYRE BOKS -->
+              <div class="tidslinje_boks tlhoyre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: left">
+                    <b>2014</b>
+                  </h2>
+                  <p class="tidslinje_info">
+                    Flyttet tilbake til Levanger å startet Evasion Tattoo.
+                  </p>
+                </div>
+                <img src="img/evasion.jpg" class="tidslinje_bilde" />
+              </div>
+              <!-- 
+    ###################################
+    ###################################
+    ######---------VENSTRE BOKS -->
+              <div class="tidslinje_boks tlvenstre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: right">
+                    <b>2012</b>
+                  </h2>
+                  <p class="tidslinje_info">
+                    Fikk lærlingeplass som tatovør i Namsos hos Margrethe Sandvær.
+                  </p>
+                </div>
+                <img src="img/namsos.jpeg" class="tidslinje_bilde" />
+              </div>
+              <!--    #################
+    ###################################
+    ###### --------HØYRE BOKS -->
+              <div class="tidslinje_boks tlhoyre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: left">
+                    <b>2008</b>
+                  </h2>
+                  <p class="tidslinje_info">
+                    Fikk lærlingeplass som elektriker og besto fagprøven i 2011.
+                  </p>
+                </div>
+                <img src="img/elektriker.jpeg" class="tidslinje_bilde" />
+              </div>
+              <div class="tidslinje_boks tlvenstre">
+                <!-- 
+    ###################################
+    ###################################
+    ######---------VENSTRE BOKS -->
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: right">
+                    <b>1998</b>
+                  </h2>
+                  <p class="tidslinje_info">Flyttet til Levanger asd asd asd asd</p>
+                </div>
+                <img src="img/levanger.jpeg" class="tidslinje_bilde" />
+                <!-- venstre innhold -->
+              </div>
+
+              <!--    #################
+    ###################################
+    ###### --------HØYRE BOKS -->
+              <div class="tidslinje_boks tlhoyre">
+                <div class="tidslinje_text">
+                  <h2 class="tidslinje_dato" style="text-align: left">
+                    <b>1988</b>
+                  </h2>
+                  <p class="tidslinje_info">Født i Kongsberg.</p>
+                </div>
+                <img src="img/baby.jpeg" class="tidslinje_bilde" />
+              </div>
+              <!-- slutt -->
+            </div>
+            <!-- slutt om meg siden -->
+          </div>
+          <!--   KONTAKT SIDEN  -->
+          <div id="kontakt" class="side" style="display: none">
+            <p class="info_box">
+              For å kontakte meg, kan du fylle ut skjemaet nedenfor og send inn, så svarer jeg så
+              fort som mulig.
+            </p>
+            <form action="#">
+              <label class="kontakt">Navn</label><br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ditt navn.."
+                style="font-size: large"
+              />
+              <br />
+              <label class="kontakt">Epost</label><br />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="epost@epost.com"
+                style="font-size: large"
+              /><br />
+
+              <label class="kontakt">Beskjed</label><br />
+              <textarea
+                placeholder="Skriv din beskjed her.."
+                class="kontakt_beskjed"
+                style="font-size: large"
+              ></textarea
+              ><br />
+
+              <button id="send_beskjed" class="send_knapp">Send beskjed</button>
+
+              <div id="modal_beskjed" class="modal">
+                <div class="modal_innhold">
+                  <span class="modal_avbryt">&times;</span>
+                  <h2>Beskjeden er nå sendt inn!</h2>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--
+    HØYRE KOLONNE
+    -->
+      <div class="rightcolumn">
+        <div class="boks">
+          <div class="bildeboks" style="height: auto">
+            <ul>
+              <h4>Liste over oppgaver</h4>
+              <li><a href="#">Oppgave1</a></li>
+              <li><a href="#">Oppgave2</a></li>
+              <li><a href="#">Oppgave3</a></li>
+              <li><a href="#">Oppgave4</a></li>
+              <li><a href="#">Oppgave5</a></li>
+              <li><a href="#">Oppgave6</a></li>
+              <li><a href="#">Oppgave7</a></li>
+              <li><a href="#">Oppgave8</a></li>
+              <li><a href="#">Oppgave9</a></li>
+              <li><a href="#">Oppgave10</a></li>
+              <li><a href="#">Oppgave11</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  FOOTER
+    -->
+    <div class="footer">Denne siden er laget til Tom-Håkon fra Tom-Håkon for Tom-Håkon</div>
+    <script src="hovedoppgave.js"></script>
+  </body>
+</html>
